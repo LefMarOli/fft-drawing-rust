@@ -1,6 +1,7 @@
-use angular;
 
 mod fft {
+
+    use angular;
 
     #[derive(Debug)]
     pub struct Complex {
