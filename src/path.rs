@@ -24,10 +24,10 @@ fn read_from_file(filename: &str) -> Result<Vec<complex::Complex>, Box<dyn Error
             if parts.len() != 2 {
                 return Err("Wrong number of arguments in input lines");
             }
-            return Ok(complex::Complex::new(
+            Ok(complex::Complex::new(
                 parts[0].trim().parse::<f64>().unwrap(),
                 parts[1].trim().parse::<f64>().unwrap(),
-            ));
+            ))
         })
         .map(|val| val.unwrap())
         .collect();
