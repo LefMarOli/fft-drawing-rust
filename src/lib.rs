@@ -1,7 +1,5 @@
 mod fft {
 
-    use angular;
-
     #[derive(Debug)]
     pub struct Complex {
         pub re: f64,
@@ -23,11 +21,11 @@ mod fft {
         }
 
         pub fn phase(self) -> angular::Angle {
-            return angular::atan(self.im / self.re);
+            angular::atan(self.im / self.re)
         }
 
         pub fn amplitude(self) -> f64 {
-            return ((self.re * self.re) + (self.im * self.im)).sqrt();
+            ((self.re * self.re) + (self.im * self.im)).sqrt()
         }
 
         pub fn add(first: &Complex, second: &Complex) -> Complex {
