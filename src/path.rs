@@ -20,7 +20,7 @@ fn read_from_file(filename: &str) -> Result<Vec<complex::Complex>, Box<dyn Error
     let result = file_content
         .lines()
         .map(|line| {
-            let parts = line.trim().split(",").collect::<Vec<&str>>();
+            let parts = line.trim().split(',').collect::<Vec<&str>>();
             if parts.len() != 2 {
                 return Err("Wrong number of arguments in input lines");
             }
