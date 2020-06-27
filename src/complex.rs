@@ -18,11 +18,11 @@ impl Complex {
         Complex { re, im }
     }
 
-    pub fn phase(self) -> angular::Angle {
+    pub fn phase(&self) -> angular::Angle {
         angular::atan(self.im / self.re)
     }
 
-    pub fn amplitude(self) -> f64 {
+    pub fn amplitude(&self) -> f64 {
         ((self.re * self.re) + (self.im * self.im)).sqrt()
     }
 
